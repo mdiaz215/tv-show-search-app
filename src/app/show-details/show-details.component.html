@@ -1,1 +1,10 @@
-<p>show-details works!</p>
+<div class="container">
+    <div class="col-sm-3" id="image">
+        <img [src]="current.image" />
+    </div>
+    <div class="col-sm-9" id="details">
+        <h3>{{current.name}}</h3>
+        <p>{{current.yearStart}} - {{current.yearEnd}}</p>
+        <p><b>Description: </b>{{current.description}}</p>
+    </div>
+</div>
