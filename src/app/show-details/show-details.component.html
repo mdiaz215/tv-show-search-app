@@ -1,1 +1,14 @@
-<p>show-details works!</p>
+<div class="containers" id="show-details">
+    <div>
+        <img class="poster" [src]="show.image" />
+    </div>
+    <div id="showHeader">
+        <h2>{{ show.title }}</h2>
+        <span>Description: {{ show.description }}</span> 
+        <br />
+        <span>Genres: {{ show.genres }}, Language: {{ show.language }}</span>
+    </div>
+    <div>
+        <span>Seasons: {{ show.seasons }}, Episodes: {{ show.episodes }}</span>
+    </div>
+</div>

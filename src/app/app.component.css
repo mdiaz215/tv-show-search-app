@@ -5,10 +5,10 @@ div .container-sm {
     margin-top: 2em;
 }
 
-#search {
-    background-color: #D3D3D3;
+div{
+    margin-bottom: 50px;
 }
 
-#show-details {
-    background-color: #BEBEBE;
+#search {
+    background-color: #D3D3D3;
 }

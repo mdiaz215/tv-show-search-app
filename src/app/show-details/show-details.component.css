@@ -1,0 +1,17 @@
+#show-details {
+    background-color: #BEBEBE;
+}
+
+div.container {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 10em;
+}
+
+.poster {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
