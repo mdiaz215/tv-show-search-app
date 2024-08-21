@@ -1,4 +1,4 @@
-export interface IShowDetailsData {
+export interface IShowDetailsData { //This is the data received from API.
     show: {
         name: string,
         premiered: string,

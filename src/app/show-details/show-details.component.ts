@@ -5,13 +5,13 @@ import { DetailsService } from '../details.service';
 @Component({
   selector: 'app-show-details',
   templateUrl: './show-details.component.html',
-  styleUrls: ['./show-details.component.css']
+  styleUrls: ['./show-details.component.css'] //updated because Angular expects array.
 })
 export class ShowDetailsComponent {
   current: IShowDetails = {
     showName: '', //updated fron name to showName
-    yearStart: 0, //When ready to fetch API data, change to 0
-    yearEnd: 0, //When ready to fetch API data, change to 0
+    yearStart: 0, 
+    yearEnd: 0, 
     description: '',
     image: ''
   }
