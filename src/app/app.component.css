@@ -1,14 +1,20 @@
-div .container-sm {
-    text-align: center;
+div.row {
+    text-align: left;
     padding-top: 1em;
     padding-bottom: 1em;
     margin-top: 2em;
 }
 
+h2 {
+    font-size: 1em;
+}
+
 #search {
     background-color: #D3D3D3;
+    border-radius: 10px;
 }
 
 #show-details {
-    background-color: #BEBEBE;
+    background-color: #f6f6f6;
+    border-radius: 10px;
 }
