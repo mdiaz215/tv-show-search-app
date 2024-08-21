@@ -1,7 +1,7 @@
 export interface IShowDetails {
     name: string
-    yearStart: Date
-    yearEnd: Date
-    description: string
+    premiered: number
+    ended: number
+    summary: string
     image: string 
 }
