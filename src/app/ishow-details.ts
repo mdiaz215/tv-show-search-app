@@ -1,7 +1,7 @@
 export interface IShowDetails {
     name: string
-    yearStart: number //changed from Date to number to store only the year
-    yearEnd: number //changed from Date to number to store only the year
+    yearStart: number, //changed to number to only collect year, but may revert back to Date
+    yearEnd: number, 
     description: string
     image: string 
 }
