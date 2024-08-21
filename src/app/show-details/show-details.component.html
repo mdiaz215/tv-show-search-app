@@ -1,1 +1,13 @@
-<p>show-details works!</p>
+<div>
+  <div>
+    <img [src]="show.image" />
+  </div>
+  <div>
+    <span>{{show.name}}</span>
+    <br/>
+    <span>{{show.yearStart | date:'yyyy'}} - {{show.yearEnd | date:'yyyy'}}</span>
+  </div>
+  <div>
+    <span>{{show.description}}</span>
+  </div>
+</div>
