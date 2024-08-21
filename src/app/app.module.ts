@@ -11,7 +11,7 @@ import { ShowDetailsComponent } from './show-details/show-details.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,10 +8,10 @@ import { IShowDetailsData } from './ishow-details-data';
 })
 export class DetailsService {
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient) {}
 
     getShowDetails(showName: string){
-      this.httpClient.get<IShowDetailsData>(`https://api.tvmaze.com/search/shows?q=${showName}`) //to add API call, e.g. &appID=${environment.appID} at end; then add environments to imports & add API key to environments
+      return this.httpClient.get<IShowDetailsData>(`https://api.tvmaze.com/search/shows?q=${showName}`) //to add API call, e.g. &appID=${environment.appID} at end; then add environments to imports & add API key to environments
     }
-   }
+   
 }
