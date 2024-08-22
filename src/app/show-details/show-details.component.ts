@@ -20,7 +20,7 @@ export class ShowDetailsComponent {
   error: string | null = null;
 
   constructor(private detailsService: DetailsService) { //will catch errors in the HTTP request. 
-    this.detailsService.getShowDetails('dfsjdfw').pipe(
+    this.detailsService.getShowDetails('Friends').pipe(
       catchError(err => {
         this.error = 'Failed to load show details'; //this message will display if there is an error in fetching the data.
         return of(null); // Return an observable to continue the flow
