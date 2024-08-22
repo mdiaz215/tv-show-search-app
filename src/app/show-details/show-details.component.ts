@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IShowDetails } from '../ishow-details';
 import { DetailsService } from '../details.service';
+import { catchError } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-show-details',
@@ -14,10 +16,19 @@ export class ShowDetailsComponent {
     yearEnd: 0, 
     description: '',
     image: ''
+  };
+  error: string | null = null;
+
+  constructor(private detailsService: DetailsService) { //will catch errors in the HTTP request. 
+    this.detailsService.getShowDetails('dfsjdfw').pipe(
+      catchError(err => {
+        this.error = 'Failed to load show details'; //this message will display if there is an error in fetching the data.
+        return of(null); // Return an observable to continue the flow
+      })
+    ).subscribe(data => { //this runs if data is NOT null.
+      if (data) {
+        this.current = data;
+      }
+    });
   }
-
-constructor(private detailsService: DetailsService){
-  this.detailsService.getShowDetails('Friends').subscribe(data => this.current = data);
-}
-
 }

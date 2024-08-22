@@ -1,13 +1,27 @@
 <div class="container">
     <br />
     <div class="row">
-        <div class="col-sm-3" id="image">
-            <img [src]="current.image" />
+      <!-- Maintains bootstrap grid -->
+      
+      <!-- If error fetching data-->
+      <div class="col-12" *ngIf="error">
+        <div class="alert alert-danger">
+          <p>Error: {{ error }}</p>
         </div>
-        <div class="col-sm-9" id="details">
-            <h3>{{current.showName}}</h3>
-            <p>{{current.yearStart}} - {{current.yearEnd}}</p> 
-            <p><b>Description: </b>{{current.description}}</p>
-        </div>
+      </div>
+  
+      <!-- Else show details -->
+      <div class="col-sm-3" id="image" *ngIf="!error">
+        <img [src]="current.image" alt="{{ current.showName }}" />
+      </div>
+      <div class="col-sm-9" id="details" *ngIf="!error">
+        <h3>{{ current.showName }}</h3>
+        <p>
+          {{ current.yearStart !== 0 ? current.yearStart : 'N/A' }} - 
+          {{ current.yearEnd !== 0 ? current.yearEnd : 'N/A' }} <!--will display 'N/A' if year data is null-->
+        </p>
+        <p><b>Description: </b>{{ current.description }}</p>
+      </div>
     </div>
-</div>
+  </div>
+  
