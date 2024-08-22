@@ -1,9 +1,10 @@
 export interface IShowDetails {
-    title: string
-    description: string
+    name: string
+    premiered: Date
+    ended: Date
     image: string
-    genres: string
-    seasons: number
-    episodes: number
-    language: string
+    genres: string[]
+    language: string 
+    rating: number
+    description: string
 }
