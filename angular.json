@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "TVshow-app": {
+    "tv-show-search-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/tvshow-app",
+            "outputPath": "dist/tv-show-search-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "TVshow-app:build:production"
+              "buildTarget": "tv-show-search-app:build:production"
             },
             "development": {
-              "buildTarget": "TVshow-app:build:development"
+              "buildTarget": "tv-show-search-app:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -1,7 +1,7 @@
-export interface IShowDetails {
+export interface IShowDetails { //Data to be shown
     name: string
-    yearStart: Date
-    yearEnd: Date
+    yearStart: number
+    yearEnd: number
     description: string
     image: string 
 }
