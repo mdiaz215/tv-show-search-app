@@ -3,11 +3,10 @@
     <img [src]="show.image" />
   </div>
   <div>
-    <span>{{show.name}}</span>
-    <br/>
-    <span>{{show.yearStart | date:'yyyy'}} - {{show.yearEnd | date:'yyyy'}}</span>
+    <h3>{{show.name}}</h3>
+    <h5>{{show.yearStart | date:'yyyy'}} - {{show.yearEnd | date:'yyyy'}}</h5>
   </div>
   <div>
-    <span>{{show.description}}</span>
+    <p>{{show.description}}</p>
   </div>
 </div>
