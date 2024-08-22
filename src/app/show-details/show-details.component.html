@@ -1,1 +1,13 @@
-<p>show-details works!</p>
+<div *ngIf="error">
+    <p>Error: {{ error }}</p>
+  </div>
+  
+  <div *ngIf="!error">
+    <h2>{{ current.name }}</h2>
+    <p>Premiered: {{ current.premiered | date:'longDate' }}</p>
+    <p>Ended: {{ current.ended ? (current.ended | date:'longDate') : 'N/A' }}</p>
+    <p>Summary: {{ current.summary }}</p>
+    <img [src]="current.image" alt="{{ current.name }}" />
+  </div>
+
+  

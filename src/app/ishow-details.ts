@@ -1,7 +1,7 @@
 export interface IShowDetails {
     name: string
-    premiered: number
-    ended: number
+    premiered: Date
+    ended: Date | null
     summary: string
     image: string 
 }
