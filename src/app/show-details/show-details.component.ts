@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IShowDetails } from '../ishow-details';
+import { TvShowsService } from '../tv-shows.service';
+
 
 @Component({
   selector: 'app-show-details',
@@ -8,13 +10,17 @@ import { IShowDetails } from '../ishow-details';
 })
 export class ShowDetailsComponent {
   show: IShowDetails = {
-    name: 'Friends',
-    premiered: new Date(1994, 9, 22),
-    ended: new Date(2004, 5, 6),
-    description: 'Popular American television sitcom.',
-    image: 'https://uniathenaprods3.uniathena.com/s3fs-public/insights-article/seriesreview-e2-80-9cfriends-e2-80-9d_0.jpg',
-    genres: ['Comedy', 'Romance'],
-    language: 'English',
-    rating: 96
+    name: '',
+    premiered: new Date(),
+    ended: new Date(),
+    description: '',
+    image: '',
+    genres: [],
+    language: '',
+    rating: 0
+  }
+
+  constructor(private tvShowsService: TvShowsService) {
+    this.tvShowsService.getTvShows('Friends').subscribe((data: IShowDetails) => this.show = data)
   }
 }

@@ -4,11 +4,11 @@
     </div>
     <div id="showHeader">
         <h2>{{ show.name }}</h2>
-        <span>Description: {{ show.description }}</span> 
+        <span><b>Description: </b>{{ show.description }}</span> 
         <br />
-        <span>Genres: {{ show.genres }}, Language: {{ show.language }}</span>
+        <span><b>Genres:</b> {{ show.genres }}, <b>Language:</b> {{ show.language }}</span>
     </div>
     <div>
-        <span>Premiered: {{ show.premiered| date: 'dd/MM/yyyy' }}, Ended: {{ show.ended| date: 'dd/MM/yyyy' }}</span>
+        <span><b>Premiered:</b> {{ show.premiered | date: 'longDate' }}, <b>Ended</b>: {{ show.ended | date: 'longDate' }}</span>
     </div>
 </div>
