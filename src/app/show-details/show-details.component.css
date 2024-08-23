@@ -1,1 +1,22 @@
 
+#details-heading h2 {
+    margin: 0;
+    padding-bottom: 25px;
+    font-size: 1em;
+}
+
+
+#image img {
+    padding: 0;
+    margin-right: 0;
+    margin-bottom: 1em;
+}
+
+#details {
+    padding-left: 0;
+}
+
+#details.col-12 {
+    padding-left: 15px;
+}
+

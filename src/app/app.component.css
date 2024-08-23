@@ -5,16 +5,42 @@ div.row {
     margin-top: 2em;
 }
 
-h2 {
-    font-size: 1em;
-}
 
+
+/* SEARCH */
 #search {
-    background-color: #D3D3D3;
     border-radius: 10px;
 }
 
-#show-details {
-    background-color: #f6f6f6;
+#search input.form-control { 
+    border: 2px solid #015c85;
+    border-radius: 10px;
+    padding: 0.5em;
+}
+
+#search input.form-control:focus { /* search field when focus */
+    border-color: #04affe;
+}
+
+#search button.btn {
+    background-color: #015c85;
+    color: #ffffff;
+    border: none;
+    padding: 0.5em 1em;
     border-radius: 10px;
 }
+
+#search button.btn:active { /* when clicked (active state) */
+    background-color: #04affe;
+    box-shadow: insert 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* SHOW DETAILS */
+#show-details {
+    background-color: #f3f7f9;
+    border-radius: 10px;
+    padding: 0;
+}
+
+
+

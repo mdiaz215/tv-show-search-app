@@ -1,20 +1,25 @@
 <div class="container">
     <br />
+          <!-- Maintains bootstrap grid -->
     <div class="row">
-      <!-- Maintains bootstrap grid -->
-      
+
       <!-- If error fetching data-->
       <div class="col-12" *ngIf="error">
         <div class="alert alert-danger">
           <p>Error: {{ error }}</p>
         </div>
       </div>
+
+      <!-- Aligns left margins of heading "results" and image -->
+      <div class="col-lg-12 col-md-12" id="details-heading">
+        <h2><b>Results:</b></h2>
+      </div>
   
       <!-- Else show details -->
-      <div class="col-sm-3" id="image" *ngIf="!error">
+      <div class="col-lg-3 col-12" id="image" *ngIf="!error">
         <img [src]="current.image" alt="{{ current.showName }}" />
       </div>
-      <div class="col-sm-9" id="details" *ngIf="!error">
+      <div class="col-lg-9 col-12" id="details" *ngIf="!error">
         <h3>{{ current.showName }}</h3>
         <p>
           {{ current.yearStart !== 0 ? current.yearStart : 'N/A' }} - 
