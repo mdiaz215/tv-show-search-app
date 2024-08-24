@@ -1,0 +1,17 @@
+.row {
+    width: 100%;
+}
+.container #image {
+float: left;
+position: relative;
+display: inline-block;
+}
+.container #namedate { /* need to fix oveflow to the left in smaller screens*/
+text-align: left;
+padding: 10px;
+border: 10px;
+}
+.container #namedate h2 {
+    font-weight: bold;
+    font-size: 2.5em;
+}

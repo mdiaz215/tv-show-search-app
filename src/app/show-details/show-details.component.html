@@ -1,12 +1,13 @@
-<div>
-  <div>
-    <img [src]="show.image" />
-  </div>
-  <div>
-    <h3>{{show.name}}</h3>
-    <h5>{{show.yearStart | date:'yyyy'}} - {{show.yearEnd | date:'yyyy'}}</h5>
-  </div>
-  <div>
-    <p>{{show.description}}</p>
+<div class="container">
+  <div class="row">
+    
+    <div class="col-3" id="image" *ngIf="!error">
+      <img [src]="show.image" />
+    </div>
+    <div class="col-9" id="namedate">
+      <h2>{{show.name}}</h2>
+      <h6>{{show.yearStart | date:'yyyy'}} - {{show.yearEnd | date:'yyyy'}}</h6>
+      <p id="description">{{show.description}}</p>
+    </div>
   </div>
 </div>
