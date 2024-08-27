@@ -1,32 +1,35 @@
-<div class="container">
+<div>
     <br />
-          <!-- Maintains bootstrap grid -->
-    <div class="row">
-
-      <!-- If error fetching data-->
-      <div class="col-12" *ngIf="error">
-        <div class="alert alert-danger">
-          <p>Error: {{ error }}</p>
-        </div>
-      </div>
+          
+    <div>
 
       <!-- Aligns left margins of heading "results" and image -->
-      <div class="col-lg-12 col-md-12" id="details-heading">
+      <div class="" id="details-heading">
         <h2><b>Results:</b></h2>
       </div>
-  
-      <!-- Else show details -->
-      <div class="col-lg-3 col-12" id="image" *ngIf="!error">
-        <img [src]="current.image" alt="{{ current.showName }}" />
+      <!-- If error fetching data, this will display; changed to check for null description-->
+      <div class="" *ngIf="current.description === ''">
+          <div class="alert alert-danger">
+            <p>No data is available. Please retry your search.</p>
+          </div>
       </div>
-      <div class="col-lg-9 col-12" id="details" *ngIf="!error">
-        <h3>{{ current.showName }}</h3>
-        <p>
-          {{ current.yearStart !== 0 ? current.yearStart : 'N/A' }} - 
-          {{ current.yearEnd !== 0 ? current.yearEnd : 'N/A' }} <!--will display 'N/A' if year data is null-->
-        </p>
-        <p><b>Description: </b>{{ current.description }}</p>
+  
+      <!-- Else show details; changed to check for data in description-->
+      <div *ngIf="current.description !== ''">
+        <mat-card class="details-card" appearance="outlined">
+         <img mat-card-md-image [src]="current.image" alt="{{ current.showName }}" />
+          <div class="" id="details">
+            <mat-card-title>{{ current.showName }}</mat-card-title>
+            <mat-card-subtitle>
+            {{ current.yearStart !== 0 ? current.yearStart : 'N/A' }} - 
+            {{ current.yearEnd !== 0 ? current.yearEnd : 'N/A' }} <!--will display 'N/A' if year data is null-->
+            </mat-card-subtitle>
+            <mat-card-content>
+              <p><b>Description: </b>{{ current.description }}</p>
+          </mat-card-content>
+        </div>
+        </mat-card>
       </div>
     </div>
-  </div>
+</div>
   
