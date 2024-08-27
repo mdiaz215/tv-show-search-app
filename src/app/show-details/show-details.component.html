@@ -1,34 +1,29 @@
 <div>
-    <br />
-          
+    <br /> 
     <div>
-
-      <!-- Aligns left margins of heading "results" and image -->
-      <div class="" id="details-heading">
-        <h2><b>Results:</b></h2>
+      <div id="details-heading">
+        <p><b>Results:</b></p>
       </div>
       <!-- If error fetching data, this will display; changed to check for null description-->
-      <div class="" *ngIf="current.description === ''">
+      <div class="details" *ngIf="current.description === ''">
           <div class="alert alert-danger">
             <p>No data is available. Please retry your search.</p>
           </div>
       </div>
   
       <!-- Else show details; changed to check for data in description-->
-      <div *ngIf="current.description !== ''">
-        <mat-card class="details-card" appearance="outlined">
-         <img mat-card-md-image [src]="current.image" alt="{{ current.showName }}" />
-          <div class="" id="details">
-            <mat-card-title>{{ current.showName }}</mat-card-title>
-            <mat-card-subtitle>
-            {{ current.yearStart !== 0 ? current.yearStart : 'N/A' }} - 
-            {{ current.yearEnd !== 0 ? current.yearEnd : 'N/A' }} <!--will display 'N/A' if year data is null-->
-            </mat-card-subtitle>
-            <mat-card-content>
-              <p><b>Description: </b>{{ current.description }}</p>
-          </mat-card-content>
-        </div>
-        </mat-card>
+      <div class="details col-3" *ngIf="current.description !== ''">
+
+            <img [src]="current.image" alt="{{ current.showName }}" />
+          <div class="details-content col-9">
+            <h2>{{ current.showName }}</h2>
+            <h3>
+              {{ current.yearStart !== 0 ? current.yearStart : 'N/A' }} - 
+              {{ current.yearEnd !== 0 ? current.yearEnd : 'N/A' }} <!--will display 'N/A' if year data is null-->
+            </h3>
+            
+            <p><b>Description: </b>{{ current.description }}</p>
+            </div>
       </div>
     </div>
 </div>

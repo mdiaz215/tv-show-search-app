@@ -2,11 +2,14 @@ import { Component, Input } from '@angular/core';
 import { IShowDetails } from '../ishow-details';
 import { CommonModule} from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+
+
 
 @Component({
   selector: 'app-show-details',
   standalone: true, //manually added, fixed error in imports below.
-  imports: [CommonModule, MatCardModule],
+  imports: [CommonModule, MatCardModule, MatGridListModule],
   templateUrl: './show-details.component.html',
   styleUrls: ['./show-details.component.css'] //updated because Angular expects array.
 })

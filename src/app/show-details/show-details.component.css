@@ -1,5 +1,23 @@
 /* Edit: stripped bootstrap */
 
-.details-card.img {
-    max-width: 300px;
-  }
+div.details {
+    background-color: none;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+img {
+    float: left;
+    margin-right: 2em;
+}
+
+
+
+@media (max-width: 768px) {
+   img {
+    float: none;
+   }
+    div.details-content {
+      width: 100%; /* Full width on smaller screens */
+    }
+}

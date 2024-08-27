@@ -1,12 +1,13 @@
 <form class="search-form">
     <mat-form-field appearance="outline" id="search-field">
       <mat-label>TV show name</mat-label>
-        <input matInput placeholder="TV show name" [formControl]="search">
+        <input matInput placeholder="Type here" [formControl]="search">
       <mat-icon matSuffix>search</mat-icon>
       <mat-hint>Enter name of TV show</mat-hint>
 
       <mat-error *ngIf="search.invalid">
-        Type three or more characters to search.
+    * Type two or more characters to search. <br /> 
+    ** If the TV show name is less than two characters, add a space at the end.
       </mat-error>
     </mat-form-field>
 </form>
