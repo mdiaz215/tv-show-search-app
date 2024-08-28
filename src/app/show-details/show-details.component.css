@@ -1,21 +1,51 @@
-/* Edit: stripped bootstrap */
-
-div.details {
-    background-color: none;
+.details-card {
+    background-color: #eaeff1;
     border-radius: 5px;
-    padding: 15px;
 }
 
-img {
-    float: left;
-    margin-right: 2em;
+.details-card .card-row {
+    display: flex;
+    align-items: center;
+}
+
+.details-card .card-image {
+    width: 200px;
+    height: 300px;
+    border-radius: 0; /* Removes default circle shape */
+    object-fit: cover; /* Ensures image scales correctly */
+    margin-right: 15px;
+}
+
+.details-card .card-text {
+    flex: 1; /* Makes content take up remaining space */
+}
+
+.details-card mat-card-title, .details-card mat-card-subtitle, .details-card mat-card-content {
+    margin: 0;
+    padding: 0;
+}
+
+.details-card mat-card-content p {
+    padding-top: 5px;
+    line-height: 1.5em; /* Makes paragraph more readable */
 }
 
 @media (max-width: 768px) {
-   img {
-    float: none;
-   }
-    div.details-content {
-      width: 100%; /* Full width on smaller screens */
+    .details-card .card-row {
+        flex-direction: column; /* Stacks content vertically */
+        align-items: flex-start; /* Aligns to start of column */
+    }
+    .details-card .card-image {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    .details-card mat-card-title, .details-card mat-card-subtitle, .details-card mat-card-content {
+        margin: 0 auto;
+        padding-left: 10px;
+    }
+
+    .details-card mat-card-content p {
+        padding-bottom: 10px;
     }
 }

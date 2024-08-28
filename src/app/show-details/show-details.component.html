@@ -1,21 +1,26 @@
 <div>
     <br /> 
-    <div>
+    <div class="details">
       <div id="details-heading">
         <p><b>Results:</b></p>
       </div>
-
-      <div class="details" *ngIf="current.description !== ''">
-            <img [src]="current.image" alt="{{ current.showName }}" />
-          <div class="details-content">
-            <h2>{{ current.showName }}</h2>
-            <h3>
+      <mat-card class="details-card">
+        <div class="card-content card-row" *ngIf="current.description !== ''">
+          <mat-card-header>
+            <img mat-card-avatar [src]="current.image" alt="{{ current.showName }}" class="card-image">
+          </mat-card-header>
+          <div class="card-text">
+            <mat-card-title>{{ current.showName }}</mat-card-title>
+            <mat-card-subtitle>
               {{ current.yearStart !== 0 ? current.yearStart : 'N/A' }} - 
               {{ current.yearEnd !== 0 ? current.yearEnd : 'N/A' }} <!--will display 'N/A' if year data is null-->
-            </h3>
-            <p><b>Description: </b>{{ current.description }}</p>
+            </mat-card-subtitle>
+            <mat-card-content>
+             <p><b>Description: </b>{{ current.description }}</p>
+            </mat-card-content>
           </div>
       </div>
+    </mat-card>
     </div>
 </div>
   
