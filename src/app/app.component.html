@@ -11,7 +11,16 @@
   <app-show-search (searchEvent)="doSearch($event)"></app-show-search>
 </div>
 
-  <div id="show-details"> <!--moved "results" header to show-details.component html -->
-    <app-show-details [current]="showDetails"></app-show-details>
+  <div id="show-details"> 
+    <ng-container *ngIf="searchInitiated">
+    <!-- If search initiated and error fetching data, this will display; changed to check for null description-->
+        <div class="details" *ngIf="showDetails.description === ''">
+          <div class="alert alert-danger">
+            <p>No data is available. Please retry your search.</p>
+          </div>
+        </div>
+    <!-- Show details displays if data is available from initiated search -->
+      <app-show-details *ngIf="showDetails.description !==''" [current]="showDetails"></app-show-details>
+    </ng-container>
   </div>
 

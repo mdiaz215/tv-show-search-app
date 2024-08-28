@@ -18,9 +18,12 @@ export class AppComponent {
     image: ''
   };
 
+  searchInitiated: boolean = false; // Tracks search state
+
   constructor(private detailsService: DetailsService) {}
 
   doSearch(searchValue: string) {
+    this.searchInitiated = true; //When search is initiated
     this.detailsService.getShowDetails(searchValue).subscribe(data => {
       this.showDetails = data; // Assign the fetched data to showDetails
     });

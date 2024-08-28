@@ -4,26 +4,17 @@
       <div id="details-heading">
         <p><b>Results:</b></p>
       </div>
-      <!-- If error fetching data, this will display; changed to check for null description-->
-      <div class="details" *ngIf="current.description === ''">
-          <div class="alert alert-danger">
-            <p>No data is available. Please retry your search.</p>
-          </div>
-      </div>
-  
-      <!-- Else show details; changed to check for data in description-->
-      <div class="details col-3" *ngIf="current.description !== ''">
 
+      <div class="details" *ngIf="current.description !== ''">
             <img [src]="current.image" alt="{{ current.showName }}" />
-          <div class="details-content col-9">
+          <div class="details-content">
             <h2>{{ current.showName }}</h2>
             <h3>
               {{ current.yearStart !== 0 ? current.yearStart : 'N/A' }} - 
               {{ current.yearEnd !== 0 ? current.yearEnd : 'N/A' }} <!--will display 'N/A' if year data is null-->
             </h3>
-            
             <p><b>Description: </b>{{ current.description }}</p>
-            </div>
+          </div>
       </div>
     </div>
 </div>
