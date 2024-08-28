@@ -1,9 +1,10 @@
-<p>show-search works!</p>
+
 <form>
-        <mat-form-field appearance="outline">
-          <mat-label>Outline form field</mat-label>
-          <input matInput placeholder="Placeholder">
-          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          <mat-hint>Hint</mat-hint>
-        </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Show name</mat-label>
+    <input matInput placeholder="Show name"
+    [formControl]="search">
+    <mat-icon matSuffix>search</mat-icon>
+    <mat-hint>Specify name of the show like 'Friends'</mat-hint>
+  </mat-form-field>
 </form>
