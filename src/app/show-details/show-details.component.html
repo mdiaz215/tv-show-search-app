@@ -6,20 +6,24 @@
       </div>
       <mat-card class="details-card">
         <div class="card-content card-row" *ngIf="current.description !== ''">
+          
           <mat-card-header>
-            <img mat-card-avatar [src]="current.image" alt="{{ current.showName }}" class="card-image">
+            <img mat-card-avatar [src]="current.image" alt="{{ current.showName }}" class="card-image"
+            onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg';"> <!-- directs to placeholder image if image data is null -->
           </mat-card-header>
+          
           <div class="card-text">
             <mat-card-title>{{ current.showName }}</mat-card-title>
             <mat-card-subtitle>
               {{ current.yearStart !== 0 ? current.yearStart : 'N/A' }} - 
               {{ current.yearEnd !== 0 ? current.yearEnd : 'N/A' }} <!--will display 'N/A' if year data is null-->
             </mat-card-subtitle>
+            
             <mat-card-content>
              <p><b>Description: </b>{{ current.description }}</p>
             </mat-card-content>
           </div>
-      </div>
+        </div>
     </mat-card>
     </div>
 </div>

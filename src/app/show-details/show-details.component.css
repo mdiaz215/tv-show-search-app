@@ -1,5 +1,5 @@
 .details-card {
-    background-color: #eaeff1;
+    background-color: #f8fafa;
     border-radius: 5px;
 }
 
@@ -21,12 +21,13 @@
 }
 
 .details-card mat-card-title, .details-card mat-card-subtitle, .details-card mat-card-content {
-    margin: 0;
     padding: 0;
+    margin: 0 auto;
 }
 
 .details-card mat-card-content p {
     padding-top: 5px;
+    padding-right: 10px;
     line-height: 1.5em; /* Makes paragraph more readable */
 }
 
@@ -41,7 +42,6 @@
     }
 
     .details-card mat-card-title, .details-card mat-card-subtitle, .details-card mat-card-content {
-        margin: 0 auto;
         padding-left: 10px;
     }
 
