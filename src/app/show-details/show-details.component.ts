@@ -3,11 +3,14 @@ import { IShowDetails } from '../ishow-details';
 import { DetailsService } from '../details.service';
 import { catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-show-details',
+  standalone: true,
   templateUrl: './show-details.component.html',
-  styleUrls: ['./show-details.component.css'] //updated because Angular expects array.
+  styleUrls: ['./show-details.component.css'], //updated because Angular expects array.
+  imports: [CommonModule]
 })
 export class ShowDetailsComponent {
   current: IShowDetails = {
