@@ -16,7 +16,7 @@ export class DetailsService {
       let uriParams = '';
 
       if (typeof search === 'string') {
-        uriParams = `'q=${encodeURIComponent(search)}`;// Encode the string to handle special characters
+        uriParams = `q=${encodeURIComponent(search)}`;// Encode the string to handle special characters
       } else if (typeof search === 'number') {
         uriParams = `q=${search}`;// Convert the number to string implicitly
       }

@@ -17,4 +17,5 @@ export class ShowDetailsComponent {
     description: '',
     image: ''
   }; 
+@Input() error: string | null = null;
 }

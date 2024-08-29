@@ -14,7 +14,7 @@ export class AppComponent {
   title = 'tv-show-search-app';
 
   currentShow: IShowDetails = {
-    showName: '', //updated fron name to showName
+    showName: '', //updated from name to showName
     yearStart: 'N/A', 
     yearEnd: 'N/A', 
     description: '',
