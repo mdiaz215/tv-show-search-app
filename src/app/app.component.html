@@ -1,11 +1,11 @@
 <div class="container">
 
   <div class="row" id="search"> <!--start of search. is NOT functioning or styled-->
-    <app-show-search></app-show-search>
+    <app-show-search (searchEvent)="doSearch($event)"></app-show-search>
   </div>
 
   <div class="row" id="show-details"> <!--moved "results" header to show-details.component html -->
-    <app-show-details></app-show-details>
+    <app-show-details [current]="currentShow"></app-show-details>
   </div>
 
 </div>
