@@ -2,15 +2,15 @@
     No data available
 </div>
 <div *ngIf="show.name !== ''" >
-    <mat-card class="Tvshows-card" appearance="outlined">
+    <mat-card class="Tvshow-card" appearance="outlined">
         <mat-card-header>
           <mat-card-title>{{ show.name }}</mat-card-title>
-          <mat-card-subtitle><b>Genres: </b>{{ show.genres }}, <b>Language: </b>{{ show.language }}</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image [src]="show.image" alt="Show details" />
         <mat-card-content>
+        <b>Genres: </b>{{ show.genres }}, <b>Language: </b>{{ show.language }} 
           <p>
-            <b>Premiered:</b> {{ show.premiered | date: 'longDate' }}, <b>Ended</b>: {{ show.ended | date: 'longDate' }}
+            <b>Premiered:</b> {{ show.premiered | date: 'mediumDate' }}, <b>Ended</b>: {{ show.ended | date: 'mediumDate' }}
           </p>
           <p>
             <b>Description: </b>{{ show.description }}
