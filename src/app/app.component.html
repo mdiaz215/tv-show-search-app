@@ -1,12 +1,16 @@
 <div class="container">
-
+  <mat-toolbar> 
+    TV Shows
+  </mat-toolbar>
   <div class="container-sm" id="search">
-    <h1>This is placeholder for the search component.</h1>
+    <h1>
+      <app-search (searchEvent)="doSearch($event)"></app-search>
+    </h1>
     <!--Search component here-->
   </div>
 
   <div class="container-sm" id="show-details">
-    <app-show-details />
+    <app-show-details [show]="showDetail"></app-show-details>
     <!--Show Details component here-->
   </div>
 

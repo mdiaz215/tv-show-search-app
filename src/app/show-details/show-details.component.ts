@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 import { IShowDetails } from '../ishow-details';
-import { TvShowsService } from '../tv-shows.service';
-
+// import { TvShowsService } from '../tv-shows.service';
 
 @Component({
   selector: 'app-show-details',
@@ -9,7 +8,7 @@ import { TvShowsService } from '../tv-shows.service';
   styleUrl: './show-details.component.css'
 })
 export class ShowDetailsComponent {
-  show: IShowDetails = {
+  @Input() show: IShowDetails = {
     name: '',
     premiered: new Date(),
     ended: new Date(),
@@ -20,7 +19,7 @@ export class ShowDetailsComponent {
     rating: 0
   }
 
-  constructor(private tvShowsService: TvShowsService) {
-    this.tvShowsService.getTvShows('Friends').subscribe((data: IShowDetails) => this.show = data)
-  }
+  // constructor(private tvShowsService: TvShowsService) {
+  //   this.tvShowsService.getTvShows('Friends').subscribe((data: IShowDetails) => this.show = data)
+  // }
 }

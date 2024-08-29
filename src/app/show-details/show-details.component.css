@@ -1,17 +1,9 @@
-#show-details {
-    background-color: #BEBEBE;
-}
-
-div.container {
-    text-align: center;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    margin-top: 10em;
-}
-
-.poster {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 125px;
+ /* .Tvshow-card {
+    max-width: 50px;
+  } */
+  
+mat-card img{
+    object-fit: cover; /*this makes the image in src fit to the size specified below*/
+    width: 20%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+    height: 20%;
 }

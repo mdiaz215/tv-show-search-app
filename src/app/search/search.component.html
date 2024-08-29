@@ -1,0 +1,12 @@
+<form>
+    <mat-form-field appearance="outline" style="width:80vw">
+        <mat-label>Show Name</mat-label>
+        <input matInput placeholder="Name" [formControl]="search">
+        <mat-icon matPrefix>search</mat-icon>
+        <mat-icon matSuffix>close</mat-icon>
+        <mat-hint>Specify the tv shows name</mat-hint>
+        <mat-error *ngIf="search.invalid">
+            Type two or more characters to search
+        </mat-error>
+    </mat-form-field>
+</form>

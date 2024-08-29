@@ -1,14 +1,25 @@
-<div class="containers" id="show-details">
-    <div>
-        <img class="poster" [src]="show.image" />
-    </div>
-    <div id="showHeader">
-        <h2>{{ show.name }}</h2>
-        <span><b>Description: </b>{{ show.description }}</span> 
-        <br />
-        <span><b>Genres:</b> {{ show.genres }}, <b>Language:</b> {{ show.language }}</span>
-    </div>
-    <div>
-        <span><b>Premiered:</b> {{ show.premiered | date: 'longDate' }}, <b>Ended</b>: {{ show.ended | date: 'longDate' }}</span>
-    </div>
+<div *ngIf="show.name === ''">
+    No data available
 </div>
+<div *ngIf="show.name !== ''" >
+    <mat-card class="Tvshows-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>{{ show.name }}</mat-card-title>
+          <mat-card-subtitle><b>Genres: </b>{{ show.genres }}, <b>Language: </b>{{ show.language }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="show.image" alt="Show details" />
+        <mat-card-content>
+          <p>
+            <b>Premiered:</b> {{ show.premiered | date: 'longDate' }}, <b>Ended</b>: {{ show.ended | date: 'longDate' }}
+          </p>
+          <p>
+            <b>Description: </b>{{ show.description }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Play</button>
+          <button mat-button>More info</button>
+        </mat-card-actions>
+      </mat-card>  
+</div>
+

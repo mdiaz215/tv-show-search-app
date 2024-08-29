@@ -12,8 +12,7 @@ export interface IShowDetailsData {
             original: string
         },
         summary: string
-    },
-    
+    },    
 }
         
 

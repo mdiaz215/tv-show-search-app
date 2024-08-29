@@ -13,20 +13,21 @@ export class TvShowsService {
   constructor(private httpClient: HttpClient) { }
 
   getTvShows(query: string) :Observable<IShowDetails>{
+
     return this.httpClient.get<IShowDetailsData[]>(`https://api.tvmaze.com/search/shows?q=${query}`).pipe(map(data => this.transformToIShowDetails(data)))
   }
 
   private transformToIShowDetails(data: IShowDetailsData[]): IShowDetails{
-  return {
-     name: data[0].show.name,
-     language: data[0].show.language,
-     genres: data[0].show.genres,
-     premiered: new Date(data[0].show.premiered*1000),
-     ended: new Date(data[0].show.ended*1000),
-     rating: this.getRating(data[0].show.rating.average),
-     image: data[0].show.image.original,
-     description: data[0].show.summary.replace(/<[^>]*>/g, '')
-  }
+    return {
+      name: data[0].show.name,
+      language: data[0].show.language,
+      genres: data[0].show.genres,
+      premiered: new Date(data[0].show.premiered),
+      ended: new Date(data[0].show.ended),
+      rating: this.getRating(data[0].show.rating.average),
+      image: data[0].show.image.original,
+      description: data[0].show.summary.replace(/<[^>]*>/g, '')
+    }
   }
 
   private getRating(avgRating : number) : number {
