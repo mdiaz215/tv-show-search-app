@@ -33,7 +33,8 @@ export class ShowdetailsService {
       premiered: new Date(data.premiered),
       ended: data.ended ? new Date(data.ended) : null,
       summary: data.summary,
-       
+      image: data.image ? data.image.medium : 'default-image-url' // Ensure image is provided
+    };
   }
 
   private getDefaultShowDetails(): IShowDetails {
@@ -46,4 +47,3 @@ export class ShowdetailsService {
     };
   }
 }
-
