@@ -1,13 +1,39 @@
-<div *ngIf="error">
-    <p>Error: {{ error }}</p>
+<!-- 
+<div *ngIf="current.description === ''">
+  No data available
+</div>
+<div *ngIf="current.description !== ''">
+-->
+<div class="container">
+  <br />
+        <!-- Maintains bootstrap grid -->
+  <div class="row">
+
+    <!-- If error fetching data-->
+    <div class="col-12" *ngIf="error">
+      <div class="alert alert-danger">
+        <p>Error: {{ error }}</p>
+      </div>
+    </div>
+
+    <!-- Aligns left margins of heading "results" and image -->
+    <div class="col-lg-12 col-md-12" id="details-heading">
+      <h2><b>Results:</b></h2>
+    </div>
+
+    <!-- Else show details -->
+    <div class="col-lg-3 col-12" id="image" *ngIf="!error">
+      <img [src]="current.image" alt="{{ current.name }}" />
+    </div>
+    <div class="col-lg-9 col-12" id="details" *ngIf="!error">
+      <h3>{{ current.name }}</h3>
+      <p>
+        {{ current.premiered !== 0 ? current.premiered : 'N/A' }} - 
+        {{ current.ended !== 0 ? current.ended : 'N/A' }} <!--will display 'N/A' if year data is null-->
+      </p>
+      <p><b>Description: </b>{{ current.summary }}</p>
+    </div>
   </div>
-  
-  <div *ngIf="!error">
-    <h2>{{ current.name }}</h2>
-    <p>Premiered: {{ current.premiered | date:'longDate' }}</p>
-    <p>Ended: {{ current.ended ? (current.ended | date:'longDate') : 'N/A' }}</p>
-    <p>Summary: {{ current.summary }}</p>
-    <img [src]="current.image" alt="{{ current.name }}" />
-  </div>
+</div> 
 
   
