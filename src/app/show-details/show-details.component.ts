@@ -12,7 +12,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
   imports: [CommonModule, MatCardModule, MatGridListModule],
   templateUrl: './show-details.component.html',
   styleUrls: ['./show-details.component.css'], //updated because Angular expects array.
-  imports: [CommonModule]
+
 })
 export class ShowDetailsComponent {
   @Input() current: IShowDetails = {
