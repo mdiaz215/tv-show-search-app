@@ -1,46 +1,28 @@
-div.row {
+
+.toolbar mat-toolbar {
+    background-color: #e0f0f7;
+    padding: 0;
+}
+
+mat-toolbar-row {
     text-align: left;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    margin-top: 2em;
+    padding: 10px;
+    margin: 0;
+    font-family: "Lilita One", sans-serif;
+    font-size: 1em;
+    color: #035577;
 }
 
-
-
-/* SEARCH */
 #search {
-    border-radius: 10px;
-}
-
-#search input.form-control { 
-    border: 2px solid #015c85;
-    border-radius: 10px;
-    padding: 0.5em;
-}
-
-#search input.form-control:focus { /* search field when focus */
-    border-color: #04affe;
-}
-
-#search button.btn {
-    background-color: #015c85;
-    color: #ffffff;
-    border: none;
-    padding: 0.5em 1em;
-    border-radius: 10px;
-}
-
-#search button.btn:active { /* when clicked (active state) */
-    background-color: #04affe;
-    box-shadow: insert 0 0 5px rgba(0,0,0,0.2);
+    padding: 15px;
+    text-align: center;
 }
 
 /* SHOW DETAILS */
 #show-details {
-    background-color: #f3f7f9;
-    border-radius: 10px;
-    padding: 0;
+    padding: 10px;
+    margin: 0 10%;
 }
 
-
+  
 

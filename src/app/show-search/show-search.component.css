@@ -1,0 +1,24 @@
+form {
+    font-family: "Tenor", sans-serif;
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    padding: 10px; /* padding around form */
+}
+
+
+/* Center mat-form-field and responsive width */
+.search-form mat-form-field {
+    width: 30%;
+    margin: 0; 
+}
+
+mat-error {
+    text-align: left;
+}
+
+
+@media (max-width: 768px) {
+    .search-form mat-form-field {
+      width: 100%; /* Full width on smaller screens */
+    }
+}

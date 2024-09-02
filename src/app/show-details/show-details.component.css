@@ -1,22 +1,51 @@
-
-#details-heading h2 {
-    margin: 0;
-    padding-bottom: 25px;
-    font-size: 1em;
+.details-card {
+    background-color: #f8fafa;
+    border-radius: 5px;
 }
 
+.details-card .card-row {
+    display: flex;
+    align-items: center;
+}
 
-#image img {
+.details-card .card-image {
+    width: 200px;
+    height: 300px;
+    border-radius: 0; /* Removes default circle shape */
+    object-fit: cover; /* Ensures image scales correctly */
+    margin-right: 15px;
+}
+
+.details-card .card-text {
+    flex: 1; /* Makes content take up remaining space */
+}
+
+.details-card mat-card-title, .details-card mat-card-subtitle, .details-card mat-card-content {
     padding: 0;
-    margin-right: 0;
-    margin-bottom: 1em;
+    margin: 0 auto;
 }
 
-#details {
-    padding-left: 0;
+.details-card mat-card-content p {
+    padding-top: 5px;
+    padding-right: 10px;
+    line-height: 1.5em; /* Makes paragraph more readable */
 }
 
-#details.col-12 {
-    padding-left: 15px;
-}
+@media (max-width: 768px) {
+    .details-card .card-row {
+        flex-direction: column; /* Stacks content vertically */
+        align-items: flex-start; /* Aligns to start of column */
+    }
+    .details-card .card-image {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
 
+    .details-card mat-card-title, .details-card mat-card-subtitle, .details-card mat-card-content {
+        padding-left: 10px;
+    }
+
+    .details-card mat-card-content p {
+        padding-bottom: 10px;
+    }
+}
